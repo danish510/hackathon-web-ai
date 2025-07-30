@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Prediksi Harga Rumah</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="hero">
+        <h1>Prediksi Harga Rumah Impian Anda</h1>
+    </div>
+    <div class="container">
+        <form method="POST">
+            <label>Kota:</label>
+            <select name="kota" required>
+                <option>Jakarta</option>
+                <option>Surabaya</option>
+                <option>Bandung</option>
+                <option>Yogyakarta</option>
+                <option>Semarang</option>
+                <option>Malang</option>
+                <option>Bekasi</option>
+                <option>Medan</option>
+                <option>Makassar</option>
+            </select>
+
+            <label>Luas Tanah (m²):</label>
+            <input type="number" name="luas_tanah" required>
+
+            <label>Jumlah Kamar:</label>
+            <input type="number" name="jumlah_kamar" required>
+
+            <label>Jumlah Kamar Mandi:</label>
+            <input type="number" name="jumlah_kamar_mandi" required>
+
+            <label>Jumlah Lantai:</label>
+            <input type="number" name="jumlah_lantai" required>
+
+            <label>
+                <input type="checkbox" name="garasi"> Garasi
+            </label>
+
+            <br><br>
+            <button type="submit">Hitung Harga</button>
+        </form>
+    </div>
+</body>
+</html>

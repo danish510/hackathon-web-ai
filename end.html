@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Hasil Prediksi</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="result">
+        <h1>Prediksi Harga Rumah Anda:</h1>
+        <p><strong>Rp {{ "{:,.0f}".format(harga).replace(",", ".") }}</strong></p>
+
+        <p>Kota: {{ data.kota }}</p>
+        <p>Luas Tanah: {{ data.luas_tanah }} m²</p>
+        <p>Jumlah Kamar: {{ data.jumlah_kamar }}</p>
+        <p>Jumlah Kamar Mandi: {{ data.jumlah_kamar_mandi }}</p>
+        <p>Jumlah Lantai: {{ data.jumlah_lantai }}</p>
+        <p>Garasi: {{ "Ya" if data.garasi else "Tidak" }}</p>
+
+        <img src="https://source.unsplash.com/featured/?house,indonesia" alt="Gambar rumah">
+    </div>
+</body>
+</html>
